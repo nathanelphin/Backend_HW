@@ -1,6 +1,7 @@
 package edu.kh.istad.b02m2restapi.service;
 
 
+import edu.kh.istad.b02m2restapi.dto.UserResponseDTO;
 import edu.kh.istad.b02m2restapi.model.User;
 
 import java.util.List;
@@ -8,9 +9,9 @@ import java.util.UUID;
 
 public interface UserServices {
 
-    List<User> getAll();
+    List<UserResponseDTO> getAll();
 
-    User getById(UUID id);
+    UserResponseDTO getById(UUID id);
 
     User deleteById(UUID id);
 

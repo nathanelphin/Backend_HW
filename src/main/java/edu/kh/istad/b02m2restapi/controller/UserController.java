@@ -1,5 +1,6 @@
 package edu.kh.istad.b02m2restapi.controller;
 
+import edu.kh.istad.b02m2restapi.dto.UserResponseDTO;
 import edu.kh.istad.b02m2restapi.model.User;
 import edu.kh.istad.b02m2restapi.repository.UserRepository;
 import edu.kh.istad.b02m2restapi.service.UserServices;
@@ -19,13 +20,13 @@ public class UserController {
     private final UserServices userService;
 
     @GetMapping
-    public List<User> getAll() {
+    public List<UserResponseDTO> getAll() {
         return userService.getAll();
     }
 
 
     @GetMapping("/{id}")
-    public User getById(@PathVariable UUID id) {
+    public UserResponseDTO getById(@PathVariable UUID id) {
 
         return userService.getById(id);
     }

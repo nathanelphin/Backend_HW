@@ -14,7 +14,7 @@ public class UserRepository {
 
     private List<User> users;
 
-    public UserRepository(UserRepository user) {
+    public UserRepository() {
         users = new ArrayList<>();
         User usrAdmin = new User(UUID.randomUUID(), "Administrator", "admin", "slickback", true);
         User usrEditor = new User(UUID.randomUUID(), "Editor", "editor", "jojo", false);
